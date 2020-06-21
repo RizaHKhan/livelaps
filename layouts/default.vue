@@ -1,35 +1,37 @@
 <template>
   <v-app id="inspire" dark>
-    <Carousel />
-    <Navigation />
-    <nuxt />
-    <Footer />
+    <v-container fluid>
+      <Navigation />
+      <nuxt />
+      <Footer />
+    </v-container>
   </v-app>
 </template>
 
 <script>
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
-import Carousel from '@/components/Carousel'
 
 export default {
   components: {
     Footer,
-    Navigation,
-    Carousel
+    Navigation
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 html {
   overflow: hidden;
 }
 
+.container {
+  overflow: hidden;
+  padding: 0;
+}
+
 #inspire {
+  border: none;
   height: 100vh;
-  background-color: black;
-  border-style: solid;
-  border-color: grey;
 }
 </style>
