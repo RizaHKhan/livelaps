@@ -12,10 +12,11 @@
           <h1 class="display-4 font-weight-thin">Hello World</h1>
           <p class="display-1 font-weight-thin">Some other text</p>
           <v-row>
-            <v-col cols="12" lg="4">
+            <v-col cols="12" md="6" lg="4">
               <v-btn
                 v-for="button in buttons"
                 :key="button.id"
+                :to="button.link"
                 class="blue ma-1"
               >
                 {{ button.name }}
@@ -59,7 +60,7 @@ export default {
         { src: '/cover11.jpg' }
       ],
       buttons: [
-        { id: 1, name: 'Button 1', link: '/' },
+        { id: 1, name: 'Button 1', link: '/home' },
         { id: 1, name: 'Button 1', link: '/' },
         { id: 1, name: 'Button 1', link: '/' },
         { id: 1, name: 'Button 1', link: '/' },
